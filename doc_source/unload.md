@@ -37,8 +37,7 @@ Possible values for *property\_name* are as follows\.
 Required\. Specifies the file format of the output\. Possible values for *file\_format* are `ORC`, `PARQUET`, `AVRO`, `JSON`, or `TEXTFILE`\.
 
 ** compression = '*compression\_format*' **  
-Optional\. This option is specific to the ORC and Parquet formats\. For ORC, possible values are `lz4`, `snappy`, `zlib`, or `zstd`\. For Parquet, possible values are `gzip` or `snappy`\. For ORC, the default is `zlib`, and for Parquet, the default is `gzip`\.  
-This option does not apply to the `AVRO` format\. Athena uses `gzip` for the `JSON` and `TEXTFILE` formats\.
+Optional\. For ORC, possible values are `lz4`, `snappy`, `zlib`, or `zstd`\. For Parquet, possible values are `gzip` or `snappy`\. For JSON and TEXTFILE, possible values are `gzip`, `snappy`, `lz4`, `zstd`, or `none`\. For ORC, the default is `zlib`, and for Parquet, JSON, and TEXTFILE, the default is `gzip`\. This option does not apply to the `AVRO` format\.
 
 ** field\_delimiter = '*delimiter*' **  
 Optional\. Specifies a single\-character field delimiter for files in CSV, TSV, and other text formats\. The following example specifies a comma delimiter\.  
